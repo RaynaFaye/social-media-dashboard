@@ -18,6 +18,7 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
+  font-weight: 700;
   background: var(--backgroud);
   color: var(--text);
   margin: 0;
@@ -37,7 +38,6 @@ body {
 /* Header Section */
 .header {
   background: var(--header-background);
-  font-weight: 700;
 }
 .header__text-block {
   border-bottom: 1px solid var(--text-blue);
@@ -125,7 +125,6 @@ body {
 }
 .card-one p:first-child,
 .card-one p:last-child {
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,11 +138,11 @@ body {
 }
 .card-one__follower__number {
   font-size: 50px;
-  font-weight: 700;
 }
 .card-one__follower__text {
   text-transform: uppercase;
   letter-spacing: 0.35em;
+  font-weight: 400;
 }
 .card-facebook {
   border-top-color: hsl(208, 92%, 53%);
@@ -164,10 +163,54 @@ body {
 .card-youtube {
   border-top-color: hsl(348, 97%, 39%);
 }
+/* Bottom card Section */
+.overview__title {
+  font-size: 24px;
+}
+.card-two {
+  display: grid;
+  grid-template-areas:
+    'title image'
+    'number score';
+  grid-gap: 30px;
+  text-align: left;
+  padding: 25px 30px;
+  align-items: center;
+}
+.card-two__title {
+  grid-area: title;
+  font-size: 14px;
+  margin: 0;
+}
+.card-two__number {
+  grid-area: number;
+  font-size: 30px;
+  margin: 0;
+}
+.card-two__image {
+  grid-area: image;
+  justify-self: end;
+}
+.card-two__score {
+  grid-area: score;
+  justify-self: end;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-two__score img {
+  margin-right: 5px;
+}
+/* Footer */
+.footer {
+  margin-top: 50px;
+}
 
 /* Attribution Section */
 .attribution {
   font-size: 11px;
+  font-weight: 400;
   text-align: center;
 }
 .attribution a {
