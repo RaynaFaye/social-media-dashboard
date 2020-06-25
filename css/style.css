@@ -96,6 +96,74 @@ body {
 .header__toggle__input:checked + .header__toggle__slider::before {
   transform: translateX(24px);
 }
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 25px;
+  row-gap: 20px;
+}
+.card {
+  font-size: 12px;
+  background: var(--card-background);
+  text-align: center;
+  border-radius: 5px;
+}
+.card__positive-number {
+  color: hsl(163, 72%, 41%);
+}
+.card__negative-number {
+  color: hsl(356, 69%, 56%);
+}
+/* Top Card section */
+.card-one {
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+.card-one > p {
+  margin: 20px 0;
+}
+.card-one p:first-child,
+.card-one p:last-child {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-one img {
+  margin-right: 5px;
+}
+.card-one__follower {
+  display: flex;
+  flex-direction: column;
+}
+.card-one__follower__number {
+  font-size: 50px;
+  font-weight: 700;
+}
+.card-one__follower__text {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+.card-facebook {
+  border-top-color: hsl(208, 92%, 53%);
+}
+.card-twitter {
+  border-top-color: hsl(203, 89%, 53%);
+}
+.card-instagram:before {
+  display: block;
+  content: '';
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.card-instagram {
+  border: none;
+}
+.card-youtube {
+  border-top-color: hsl(348, 97%, 39%);
+}
 
 /* Attribution Section */
 .attribution {
