@@ -22,12 +22,6 @@ body {
   font-weight: 700;
   background: var(--backgroud);
   color: var(--text);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 200px 50px 1fr 50px;
-}
-body > * {
-  grid-column: 1;
 }
 .text-color-two {
   color: var(--text-blue);
@@ -39,6 +33,14 @@ body > * {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 50px 1fr 50px;
+}
+.container > * {
+  grid-column: 1;
 }
 /* Header Section */
 .header {
@@ -256,7 +258,7 @@ body > * {
   }
 }
 @media all and (min-width: 675px) {
-  body {
+  .container {
     grid-template-rows: 150px 100px 1fr 50px;
   }
   /* Header Section */
