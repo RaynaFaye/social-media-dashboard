@@ -29,28 +29,32 @@
           <div class="card card-one card-facebook">
             <p class="text-color-two"><img src="images/icon-facebook.svg" alt="Facebook" /> @nathanf</p>
             <p class="card-one__follower">
-              <span class="card-one__follower__number">1987</span><span class="text-color-two card-one__follower__text"> followers</span>
+              <span class="card-one__follower__number">{{ facebookFollowers | aboveTenThousand }}</span
+              ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
             <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 12 Today</p>
           </div>
           <div class="card card-one card-twitter">
             <p class="text-color-two"><img src="images/icon-twitter.svg" alt="Twitter" /> @nathanf</p>
             <p class="card-one__follower">
-              <span class="card-one__follower__number">1044</span><span class="text-color-two card-one__follower__text"> followers</span>
+              <span class="card-one__follower__number">{{twitterFollowers | aboveTenThousand }}</span
+              ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
             <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 99 Today</p>
           </div>
           <div class="card card-one card-instagram">
             <p class="text-color-two"><img src="images/icon-instagram.svg" alt="Instagram" /> @realnathanf</p>
             <p class="card-one__follower">
-              <span class="card-one__follower__number">11k</span><span class="text-color-two card-one__follower__text"> followers</span>
+              <span class="card-one__follower__number">{{ instagramFollowers | aboveTenThousand }}</span
+              ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
             <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 1099 Today</p>
           </div>
           <div class="card card-one card-youtube">
             <p class="text-color-two"><img src="images/icon-youtube.svg" alt="Instagram" /> Nathan F.</p>
             <p class="card-one__follower">
-              <span class="card-one__follower__number">8239</span><span class="text-color-two card-one__follower__text"> Subscribers</span>
+              <span class="card-one__follower__number">{{ youtubeFollowers | aboveTenThousand }}</span
+              ><span class="text-color-two card-one__follower__text"> Subscribers</span>
             </p>
             <p class="card__negative-number"><img src="images/icon-down.svg" alt="" /> 144 Today</p>
           </div>
