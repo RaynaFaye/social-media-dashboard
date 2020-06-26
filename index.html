@@ -32,7 +32,8 @@
               <span class="card-one__follower__number">{{ facebookFollowers | aboveTenThousand }}</span
               ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
-            <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 12 Today</p>
+            <p v-if="facebookDifference >= 0" class="card__positive-number"><img src="images/icon-up.svg" alt="" /> {{facebookDifference}} Today</p>
+            <p v-else class="card__negative-number"><img src="images/icon-down.svg" alt="" /> {{facebookDifference | removeMinus}} Today</p>
           </div>
           <div class="card card-one card-twitter">
             <p class="text-color-two"><img src="images/icon-twitter.svg" alt="Twitter" /> @nathanf</p>
@@ -40,7 +41,8 @@
               <span class="card-one__follower__number">{{twitterFollowers | aboveTenThousand }}</span
               ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
-            <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 99 Today</p>
+            <p v-if="twitterDifference >= 0" class="card__positive-number"><img src="images/icon-up.svg" alt="" /> {{twitterDifference}} Today</p>
+            <p v-else class="card__negative-number"><img src="images/icon-down.svg" alt="" /> {{twitterDifference | removeMinus}} Today</p>
           </div>
           <div class="card card-one card-instagram">
             <p class="text-color-two"><img src="images/icon-instagram.svg" alt="Instagram" /> @realnathanf</p>
@@ -48,7 +50,8 @@
               <span class="card-one__follower__number">{{ instagramFollowers | aboveTenThousand }}</span
               ><span class="text-color-two card-one__follower__text"> followers</span>
             </p>
-            <p class="card__positive-number"><img src="images/icon-up.svg" alt="" /> 1099 Today</p>
+            <p v-if="instagramDifference >= 0" class="card__positive-number"><img src="images/icon-up.svg" alt="" /> {{instagramDifference}} Today</p>
+            <p v-else class="card__negative-number"><img src="images/icon-down.svg" alt="" /> {{instagramDifference | removeMinus}} Today</p>
           </div>
           <div class="card card-one card-youtube">
             <p class="text-color-two"><img src="images/icon-youtube.svg" alt="Instagram" /> Nathan F.</p>
@@ -56,7 +59,8 @@
               <span class="card-one__follower__number">{{ youtubeFollowers | aboveTenThousand }}</span
               ><span class="text-color-two card-one__follower__text"> Subscribers</span>
             </p>
-            <p class="card__negative-number"><img src="images/icon-down.svg" alt="" /> 144 Today</p>
+            <p v-if="youtubeDifference >= 0" class="card__positive-number"><img src="images/icon-up.svg" alt="" /> {{youtubeDifference}} Today</p>
+            <p v-else class="card__negative-number"><img src="images/icon-down.svg" alt="" /> {{youtubeDifference | removeMinus}} Today</p>
           </div>
         </section>
         <section>

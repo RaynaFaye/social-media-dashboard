@@ -7,6 +7,11 @@ new Vue({
     instagramFollowers: '',
     youtubeFollowers: '',
     followers: [],
+    prevFollowers: [],
+    facebookDifference: '',
+    twitterDifference: '',
+    instagramDifference: '',
+    youtubeDifference: '',
   },
   created: function () {
     function handleError(err) {
@@ -20,6 +25,7 @@ new Vue({
       .then((data) => {
         data.forEach((element) => {
           this.followers.push(element.currentFollowers);
+          this.prevFollowers.push(element.previousFollowers);
         });
       })
       .then(this.followers)
@@ -39,6 +45,12 @@ new Vue({
       this.instagramFollowers = this.followers[2];
       this.youtubeFollowers = this.followers[3];
     },
+    prevFollowers() {
+      this.facebookDifference = this.facebookFollowers - this.prevFollowers[0];
+      this.twitterDifference = this.twitterFollowers - this.prevFollowers[1];
+      this.instagramDifference = this.instagramFollowers - this.prevFollowers[2];
+      this.youtubeDifference = this.youtubeFollowers - this.prevFollowers[3];
+    },
   },
   filters: {
     aboveTenThousand(value) {
@@ -52,6 +64,9 @@ new Vue({
         return value.toString().slice(0, 2) + 'k';
       }
       return value;
+    },
+    removeMinus(value) {
+      return Math.abs(value);
     },
   },
 });
