@@ -4,6 +4,7 @@
   --backgroud: #1e202a;
   --header-background: #1f212e;
   --card-background: #252a41;
+  --card-background-hover: #313753;
   --text-blue: #8b97c6;
   --text: #ffffff;
 }
@@ -11,10 +12,10 @@
   --backgroud: #ffffff;
   --header-background: #f5f7ff;
   --card-background: #f0f2fa;
+  --card-background-hover: #dcdeeb;
   --text-blue: #63687e;
   --text: #1e202a;
 }
-
 body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -63,12 +64,18 @@ body > * {
   align-items: center;
   padding: 10px 0;
 }
+.header__toggle:hover > p {
+  color: var(--text);
+}
 .header__toggle__block {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 26px;
   border: 1px solid transparent;
+}
+.header__toggle__block:focus-within {
+  border: 1px dotted var(--text);
 }
 .header__toggle__input {
   position: absolute;
@@ -102,6 +109,9 @@ body > * {
 .header__toggle__input:checked + .header__toggle__slider::before {
   transform: translateX(24px);
 }
+.header__toggle__input:checked + .header__toggle__slider:hover {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
 /* Cards */
 .main {
   grid-row: 2 / 5;
@@ -118,6 +128,10 @@ body > * {
   background: var(--card-background);
   text-align: center;
   border-radius: 5px;
+}
+.card:hover {
+  background: var(--card-background-hover);
+  cursor: pointer;
 }
 .card__positive-number {
   color: hsl(163, 72%, 41%);
